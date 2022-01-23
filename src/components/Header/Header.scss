@@ -1,0 +1,291 @@
+.login-with-steam__btn {
+    width: 250px;
+    padding-left: unset;
+    padding-right: unset;
+
+    padding: 13.5px 0;
+}
+
+.header-login {
+    justify-self: end;
+
+    &__lang {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        padding: 11px;
+        background: #28292d;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+        border-radius: 50%;
+        transition: 0.15s;
+
+        margin-right: 16px;
+        img {
+            height: 18px;
+        }
+        &:hover {
+            transform: scale(90%);
+            opacity: 0.9;
+        }
+        &:active {
+            transform: scale(75%);
+        }
+    }
+
+    &__body {
+        display: flex;
+        // gap: 18px;
+        & a {
+            & button {
+                & img {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+    &__balance {
+        & button {
+            padding: 13px 16px;
+        }
+        margin-right: 8px;
+    }
+
+    &__top-up-balance {
+        & button {
+            padding: 13px;
+        }
+
+        margin-right: 16px;
+
+        @media (max-width: 425px) {
+            margin: 0;
+        }
+    }
+
+    &__photo {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        & img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        margin-right: 10px;
+    }
+
+    &__more {
+        position: relative;
+    }
+
+    &__more-btn {
+        height: 100%;
+
+        &:hover {
+            opacity: 0.5;
+        }
+        transition: 0.3s;
+        &.open {
+            transform: rotateX(180deg);
+        }
+        background-color: transparent;
+    }
+
+    &__more-options {
+        height: 100%;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 50px;
+        position: absolute;
+        z-index: 2000;
+        background: #28292d;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.6);
+        border-radius: 8px;
+        width: 132px;
+        height: 100px;
+        transition: 0.2s;
+        animation: showing 0.2s;
+        @keyframes showing {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__more-option {
+        width: 100%;
+        flex: 1 1 50%;
+        display: flex;
+        align-items: center;
+
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+        user-select: none;
+        cursor: pointer;
+        background-color: rgba(40, 41, 45, 1);
+        transition: 0.1s;
+        text-align: left;
+        color: white;
+        &:hover {
+            background-color: #2f3035;
+        }
+        div,
+        a {
+            display: flex;
+            align-items: center;
+
+            padding: 0 16px;
+            width: 100%;
+
+            gap: 10px;
+            color: white;
+
+            & img {
+                width: 18px;
+            }
+        }
+        &:last-child a {
+            color: #ff4b32;
+        }
+    }
+}
+
+.header-notice-btn {
+    justify-self: end;
+}
+
+.header {
+    grid-area: header;
+
+    background: #222328;
+    &__body {
+        height: 100%;
+        padding: 0 24px;
+    }
+
+    &__notice {
+        height: unset;
+        width: 200px;
+        right: 480px;
+    }
+
+    &__grid {
+        position: relative;
+        color: white;
+
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-auto-flow: column;
+        gap: 20px;
+
+        align-items: center;
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            background-color: #1b1c20;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+        }
+        &::before {
+            background-color: #2a2b31;
+            bottom: 0px;
+            height: 1px;
+        }
+        @media (max-width: 1055px) {
+            grid-template-columns: auto 1fr auto auto 1fr;
+        }
+    }
+    @media (max-width: 440px) {
+        &__body {
+            padding: 0 16px;
+        }
+
+        &__grid {
+            gap: 10px;
+        }
+    }
+    &__nav {
+        justify-self: start;
+    }
+
+    &__contacts {
+        & a {
+            display: flex;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        margin-right: 0px;
+
+        @media (max-width: 1190px) {
+            margin-right: 2px;
+        }
+    }
+    &__contact {
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        transition: 0.15s ease;
+        transform: translateY(0px);
+        &:hover {
+            transform: translateY(-4px);
+            opacity: 0.8;
+        }
+    }
+
+    &__logo {
+        justify-self: start;
+        display: flex;
+        margin-right: 40px;
+
+        @media (max-width: 1190px) {
+            margin-right: 20px;
+        }
+        @media (max-width: 425px) {
+            margin: 0;
+            width: 20px;
+            overflow: hidden;
+        }
+    }
+}
+
+.login-check {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 15px 35px 0;
+}
+
+.login-check__item {
+}
+
+.login-check__btn {
+    font-size: 0.9em;
+    align-self: center;
+}
+
+.login-check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.login-check-item__check {
+}
+.login-check-item__title {
+    font-size: 0.8em;
+    opacity: 0.8;
+}

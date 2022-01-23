@@ -1,0 +1,145 @@
+.about-game-history {
+    overflow: scroll;
+    height: 570px;
+    max-height: 70vh;
+    margin-bottom: 10px;
+    @media (min-width: 769px) {
+        width: 432px;
+    }
+    &__container {
+    }
+
+    &__head {
+        padding: 24px 20px;
+        background: #28292d;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__kof-x {
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    &__sub-kof-x {
+        margin-bottom: 32px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #ffffff;
+        opacity: 0.7;
+    }
+
+    &__provably-fair {
+        transition: 0.1s ease;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+        margin-bottom: 20px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 6px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    &__hash {
+        margin-bottom: 18px;
+    }
+
+    &__salt {
+        margin-bottom: 25px;
+    }
+
+    &__verify-btn {
+        transition: 0.1s ease;
+        &:hover {
+            opacity: 0.8;
+        }
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+
+        align-self: stretch;
+        background: #3d3e42;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+        border-radius: 29px;
+    }
+
+    &__line-info {
+        padding: 24px 0 16px;
+        //align-items: center;
+        display: flex;
+        gap: 8px;
+    }
+
+    &__all-bets {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.about-game-history-hash {
+    font-size: 13px;
+    width: 392px;
+}
+
+.about-game-history-hash,
+.about-game-history-salt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__title {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: #ffffff;
+        flex: 0 1 auto;
+    }
+
+    &__body {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 0 1 auto;
+        margin-left: 8px;
+
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: #ffffff;
+        opacity: 0.7;
+    }
+
+    &__copy {
+        flex: 0 1 auto;
+
+        margin-left: 7px;
+        background-color: transparent;
+    }
+}
+
+.about-game-history-salt {
+    &__title {
+    }
+
+    &__body {
+        margin-left: 14px;
+    }
+
+    &__copy {
+    }
+}

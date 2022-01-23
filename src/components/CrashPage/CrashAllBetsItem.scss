@@ -1,0 +1,158 @@
+.crash-all-bets-item {
+    &.crash-all-bets-item-in-game {
+        background: #28292d;
+    }
+    &.crash-all-bets-item-crashed {
+        opacity: 0.25;
+        background: #28292d5b;
+    }
+    &.crash-all-bets-item-without-avatar {
+        grid-template: 1fr / 4fr 1fr 1fr 1fr 54px;
+        padding: 0;
+    }
+
+    padding: 16px;
+    background: #2f3035;
+    border-radius: 8px;
+    display: grid;
+    grid-template: 1fr / auto 4fr 1fr 1fr 1fr 54px;
+
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width: 1024px) {
+        grid-template: 1fr 1fr / auto auto auto auto;
+        // grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+        justify-items: end;
+
+        .crash-all-bets-item__avatar-link {
+            justify-self: start;
+        }
+
+        .crash-all-bets-item__bets-value {
+            justify-self: start;
+        }
+
+        .crash-all-bets-item__weapons-in-bet {
+            grid-column: 2 / -1;
+        }
+
+        .crash-all-bets-item__bet-x {
+            justify-self: end !important;
+        }
+
+        &.crash-all-bets-item-without-avatar {
+            padding: 0;
+            grid-template: 1fr 1fr / auto auto auto auto;
+            // grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+
+            .crash-all-bets-item__weapons-in-bet {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+        padding: 10px !important;
+        gap: 8px !important;
+    }
+
+    &__avatar {
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 1);
+        border-radius: 41px;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__weapons-in-bet {
+        > div {
+            box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.5);
+        }
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__items-plus {
+        color: rgba(255, 255, 255, 0.829);
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+    }
+    &__bet-x {
+    }
+
+    &__bets-value,
+    &__bets-value-win {
+        display: flex;
+        align-items: baseline;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+        gap: 1px;
+        img {
+            margin-right: 6px;
+            transform: translateY(1px);
+        }
+    }
+    &__bets-value {
+        justify-self: end;
+        white-space: nowrap;
+    }
+    &__bets-value-win {
+        color: rgba(255, 198, 50, 1);
+        // white-space: nowrap;
+    }
+    &__win-weapon {
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.5);
+    }
+}
+
+.crash-all-bets-item-in-about-game {
+    display: grid;
+    grid-template: unset;
+    padding-right: 20px;
+
+    align-items: center;
+    gap: 16px;
+    background: rgba(40, 41, 45, 1);
+    grid-template-columns: 40px 1fr auto auto;
+
+    grid-template-areas:
+        "ava weapons    . betValue"
+        ".   winWeapon betX betValueWin";
+
+    .crash-all-bets-item__avatar {
+        grid-area: ava;
+    }
+
+    .crash-all-bets-item__weapons-in-bet {
+        grid-area: weapons;
+    }
+
+    .crash-all-bets-item__items-plus {
+    }
+
+    .crash-all-bets-item__bet-x {
+        grid-area: betX;
+        justify-self: end;
+        //background: #28292d !important;
+    }
+
+    .crash-all-bets-item__bets-value {
+        grid-area: betValue;
+    }
+
+    .crash-all-bets-item__bets-value-win {
+        grid-area: betValueWin;
+    }
+
+    .crash-all-bets-item__win-weapon {
+        grid-area: winWeapon;
+        justify-self: start;
+    }
+}

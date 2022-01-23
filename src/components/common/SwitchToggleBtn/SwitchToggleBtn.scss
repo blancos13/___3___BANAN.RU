@@ -1,0 +1,94 @@
+.switch-toggle-btn {
+    display: inline-block;
+    width: 52px;
+    height: 32px;
+}
+
+.form-switch {
+    display: inline-block;
+    width: 52px;
+    height: 32px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.form-switch i {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 32px;
+    background-color: #28292d;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.1s linear;
+}
+
+.form-switch i::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 52px;
+    height: 32px;
+    background-color: #28292d;
+    border-radius: 19px;
+    transform: translate3d(0px, 0px, 0) scale3d(1, 1, 1);
+    transition: all 0.1s linear;
+}
+
+.form-switch i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    opacity: 0.2;
+    border-radius: 20px;
+    //box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translate3d(6px, 6px, 0);
+    transition: all 0.15s ease;
+}
+
+.form-switch:active i::after {
+    width: 20px;
+
+    transform: translate3d(6px, 6px, 0);
+}
+
+// .form-switch:active input:checked + i::after {
+//     transform: translate3d(14px, 6px, 0);
+// }
+
+.form-switch input {
+    display: none;
+}
+
+.form-switch input:checked + i {
+    background-color: #615128;
+}
+
+.form-switch input:checked + i::before {
+    transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.form-switch input:checked + i::after {
+    transform: translate3d(26px, 6px, 0);
+}
+
+.form-switch:hover {
+    & input {
+    }
+    & i {
+        &::after {
+            opacity: 0.8;
+        }
+        &::before {
+            background-color: #2f3035;
+        }
+    }
+}
+
+.form-switch input:checked + i::after {
+    background-color: #ffc632;
+    opacity: 1;
+}

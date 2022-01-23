@@ -1,0 +1,39 @@
+.provably-fair {
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    padding: 0 24px;
+
+    &__container {
+        max-height: 580px;
+    }
+
+    @media (min-width: 769px) {
+        max-width: 432px;
+        padding: 0;
+    }
+
+    &__head-bottom {
+        margin-top: 20px;
+        text-align: justify;
+        width: 100%;
+        font-size: 13px;
+        line-height: 18px;
+        color: #ffffffaf;
+    }
+    &__body {
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 20px;
+        text-align: justify;
+        width: 100%;
+        font-size: 13px;
+        line-height: 18px;
+        color: #ffffffee;
+        background: #28292d;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+        border-radius: 8px;
+    }
+}

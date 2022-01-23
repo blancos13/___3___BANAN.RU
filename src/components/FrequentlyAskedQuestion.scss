@@ -1,0 +1,108 @@
+.faq {
+    padding-bottom: 12px;
+    //overflow: hidden;
+    $titleHeight: 62px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__title {
+        color: rgb(221, 221, 221);
+        font-size: 35px;
+        text-align: center;
+        color: #ffc532dc;
+        margin-bottom: 32px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1 1 auto;
+        height: 100px;
+        overflow-y: overlay;
+
+        gap: 16px;
+        @media (max-width: 1750px) {
+            gap: 8px;
+        }
+    }
+
+    &__item {
+        background-color: #202126;
+    }
+
+    .faq-item-hide {
+        height: $titleHeight;
+        .faq-item__body {
+        }
+
+        .faq-item__title {
+            color: rgb(221, 221, 221);
+            img {
+                transform: rotate(0deg);
+            }
+        }
+
+        .faq-item__content {
+            transition: 0s;
+            opacity: 0;
+            transform: translateY(-80%);
+        }
+    }
+
+    .faq-item {
+        &__body {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 8px;
+
+            background: #28292d;
+
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            color: #ffc532dc;
+            // color: rgb(221, 221, 221);
+            padding: 16px 16px;
+            font-size: 20px;
+
+            @media (max-width: 1510px) {
+                font-size: 15px;
+            }
+            img {
+                transition: 0.15s;
+                transform: rotate(180deg);
+            }
+            &:hover {
+                background: #2f3035;
+            }
+        }
+
+        &__content {
+            height: 150%;
+
+            transition: 0.15s transform;
+            background-color: #202126;
+            position: relative;
+            z-index: 9;
+            padding: 16px 16px 8px 32px;
+            color: rgb(192, 192, 192);
+            font-size: 17px;
+            line-height: 22px;
+            @media (max-width: 1750px) {
+                padding-top: 8px;
+            }
+        }
+    }
+}

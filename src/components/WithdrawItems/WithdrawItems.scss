@@ -1,0 +1,28 @@
+.withdraw-items {
+    position: relative;
+    overflow-y: auto;
+    max-height: 620px;
+    &__body {
+        display: grid;
+        row-gap: 8px;
+        padding-bottom: 24px;
+        animation: start-opacity 0.5s 1 linear;
+    }
+
+    @media (max-width: 768px) {
+        max-height: calc(100vh - 46px - 24px);
+        &__body {
+            > .weapon-item.large-weapon {
+                width: 100%;
+            }
+        }
+    }
+}
+@keyframes start-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

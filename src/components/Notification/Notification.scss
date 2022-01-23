@@ -1,0 +1,49 @@
+.notifications {
+    position: relative;
+    z-index: 11000;
+
+    max-width: 300px;
+    min-width: 50px;
+    width: 100%;
+
+    &__row {
+        display: inline-flex;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    &__item {
+    }
+}
+
+.notification-item {
+    cursor: pointer;
+    animation: cssload-opacity 0.5s 1 linear;
+    box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+    padding: 16px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    background-color: rgba(43, 43, 43, 0.918);
+
+    &.notif-item-succes {
+        background-color: #363226;
+    }
+    &.notif-item-failed {
+        background: #362527;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__image {
+        height: 17px;
+        width: 17px;
+    }
+
+    &__content {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}

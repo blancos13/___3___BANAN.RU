@@ -1,0 +1,145 @@
+.chat-message {
+    width: 100%;
+    &__grid {
+        width: 100%;
+        column-gap: 16px;
+        row-gap: 12px;
+        display: grid;
+        grid-template-columns: 40px 4fr 1fr;
+        grid-template-areas:
+            "avatar name time"
+            "avatar msg msg"
+            "photo photo photo";
+    }
+    &__photo {
+        grid-area: photo;
+
+        display: flex;
+    }
+    a {
+        grid-area: avatar;
+    }
+    &__avatar {
+        border-radius: 41px;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__person-position {
+        font-weight: bold;
+        font-size: 15px;
+        margin-right: 8px;
+    }
+
+    .person-position-dev {
+        color: #ff32ad;
+    }
+    .person-position-admin {
+        color: #ffc632;
+    }
+    .person-position-mod {
+        color: #32c1ff;
+    }
+    .person-position-yt {
+        color: #ff4b32;
+    }
+    .person-position-twitch {
+        color: #8c32ff;
+    }
+    &__name {
+        margin-top: 5px;
+        grid-area: name;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    &__time {
+        margin-top: 5px;
+        grid-area: time;
+        font-size: 13px;
+        line-height: 15px;
+        justify-self: end;
+        opacity: 0.5;
+    }
+
+    &__text {
+        position: relative;
+        max-width: 90%;
+        padding: 12px;
+        background: #28292d;
+        border-radius: 8px;
+        grid-area: msg;
+        font-size: 13px;
+        line-height: 18px;
+        color: #ffffff;
+        opacity: 0.7;
+        justify-self: start;
+        grid-template-columns: 1fr;
+
+        word-wrap: break-word;
+
+        > button {
+            border: none !important;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.212);
+        }
+    }
+    &.blur-message {
+        .chat-message__avatar {
+            overflow: hidden;
+            img {
+                filter: blur(5px);
+            }
+        }
+    }
+    &.chat-my-message {
+        .chat-message__grid {
+            column-gap: 16px;
+            row-gap: 12px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "time time time"
+                "msg  msg  msg"
+                "photo photo photo";
+        }
+        .chat-message__photo {
+            justify-self: end;
+        }
+        .chat-message__time {
+            justify-self: end;
+        }
+        .chat-message__text {
+            background: #323338;
+            opacity: 0.9;
+            justify-self: end;
+        }
+        .chat-message__name,
+        .chat-message__avatar {
+            display: none;
+        }
+    }
+
+    .photochka {
+        width: 272px;
+        height: 176px;
+
+        border-radius: 8px;
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin: 12px 5px;
+
+        cursor: pointer;
+
+        background-size: cover;
+        background-position: center;
+    }
+}

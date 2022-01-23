@@ -1,0 +1,179 @@
+.support {
+    &__footer {
+        display: flex;
+        grid-column: 1 / -1;
+        align-items: center;
+    }
+    @media (max-width: 1145px) {
+        top: 28px;
+        left: 28px;
+        right: 28px;
+    }
+    @media (max-width: 768px) {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+    position: absolute;
+    top: 32px;
+    left: 56px;
+    right: 56px;
+    bottom: 0px;
+    background: #222328;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: 22px 22px 1fr auto 44px;
+    grid-template-columns: 136px auto auto auto auto 136px;
+    row-gap: 12px;
+    align-items: center;
+    grid-template-areas:
+        "h4     h4    h4     h4      blockAssistant   blockAssistant"
+        "about  about about  about   blockAssistant   blockAssistant"
+        "chat   chat  chat   chat    chat             chat"
+        "img    img   img    img     img              img"
+        "attach input input  input   input            send";
+
+    .chatSupport {
+        height: 100%;
+        overflow: scroll;
+        grid-area: chat;
+        align-self: start;
+    }
+
+    h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 22px;
+        grid-area: h4;
+    }
+    .loadPhoto {
+        grid-area: img;
+        display: flex;
+        cursor: pointer;
+        max-height: 88px;
+        > div {
+            position: relative;
+            margin-right: 8px;
+            width: 136px;
+            height: 88px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+    }
+    .largeImg {
+        background-color: #202126c4;
+        position: absolute;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 5%;
+        overflow: hidden;
+
+        img:first-child {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .deleteImg {
+        position: absolute;
+        padding: 4px;
+        margin: 10px;
+
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+    > span {
+        grid-area: about;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        opacity: 0.7;
+    }
+    .BlackBtnSup {
+        grid-area: attach;
+        cursor: pointer;
+        height: 40px;
+
+        span {
+            margin-left: 10px;
+        }
+    }
+    .SendInputSup {
+        grid-area: input;
+        flex: 1 1 auto;
+    }
+    .YellowBtnSup {
+        grid-area: send;
+        gap: 5px;
+        margin-left: 10px;
+        @media (max-width: 1024px) {
+            padding: 15px;
+            padding-left: 19px;
+        }
+        span {
+            margin-left: 10px;
+        }
+    }
+    .closeTicket {
+        grid-area: blockAssistant;
+        background: #362527;
+        box-shadow: 0px 1px 7px -2px rgba(26, 27, 29, 0.3);
+        color: white;
+        width: 150px;
+        white-space: nowrap;
+        justify-self: end;
+        &:hover {
+        }
+    }
+    .blockAssistent {
+        margin-left: 40px;
+        grid-area: blockAssistant;
+        background: #28292d;
+        border-radius: 37px;
+        max-width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 5px;
+        text-overflow: ellipsis;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: end;
+        padding: 10px 24px 10px 10px;
+        img {
+            border-radius: 41px;
+            width: 40px;
+        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 10px;
+            height: 100%;
+            span:first-child {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 17px;
+            }
+            span:last-child {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 15px;
+                opacity: 0.7;
+            }
+        }
+    }
+}

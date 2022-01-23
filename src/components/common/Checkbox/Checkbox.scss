@@ -1,0 +1,74 @@
+.main-checkbox {
+    margin-left: 20px; ///////TEMP-STYLE
+    & label {
+        & span {
+            transition: 0.1s;
+            &:hover {
+                color: #ffffffc2;
+            }
+        }
+    }
+}
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+    color: #ffffff33;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox > span::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 4px;
+    border: 2px solid rgb(59, 60, 67);
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 80% 80%;
+    transition: 0.1s;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: #ffc632;
+    color: white;
+}
+.main-checkbox label span {
+    transition: 0.1s;
+    color: red;
+}
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox > input:not(:disabled):active + span::before + span {
+    background-color: #ffc632;
+    border-color: #ffc632;
+}
+
+.custom-checkbox > input:checked + span::before {
+    border-color: #ffc632;
+    background-color: #ffc632;
+    background-image: url("../../../assets/image/checkboxChecked.svg");
+}
+.custom-checkbox > input:checked {
+    background-color: blue;
+    & span {
+        //color: #ffc632;
+        background-color: blue;
+    }
+}
