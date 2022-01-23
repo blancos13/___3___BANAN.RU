@@ -1,0 +1,125 @@
+{
+    "add-funds": {
+        "transactionValue": "Стоимость транзакции около ~$ ",
+        "bonusDeposit": " (+{{bonusDeposit}}% включены в депозит и - ({{selectedDep.fee.percent}}% +{{selectedDep.fee.value}}$) комисия)",
+        "Enter promocode": "Введите промокод",
+        "Apply": "Применить",
+        "Promocode": "Промокод",
+        "Deposit amount": "Сумма депозита"
+    },
+    "provably-fair": {
+        "Verify the outcome": "Проверить результат",
+        "title": "Проверить sha-256 генератором",
+        "verifyGuide": "Хеш генерируется по этой формуле: sha256(Crash + Salt). Для этой игры - {{crashRes}} + {{salt}}. Вы может проверить этот хэш в любом генераторе sha256.",
+        "description": [
+            "Перед началом каждой игры salt случайно генерируется (32 случайных символа) и число, на котором игра заканчивается.",
+
+            "Они складываются и хешируются с помощью sha256, после чего этот хеш отображается перед началом игры.",
+
+            "В конце игры вы можете увидеть salt, с которой была создана игра, и убедиться, что хеш не изменился и все совпадает.",
+
+            "Все это означает, что мы не можем повлиять на исход игры заранее или во время самой игры."
+        ]
+    },
+    "history": {
+        "Multiplier outcome": "Результат",
+        "Game": "Игра",
+        "Soon": "Скоро",
+        "modalTitle": "История игр"
+    },
+    "chat": {
+        "title": "Чат",
+        "online": "онлайн",
+        "Chat is paused": "Чат приостановлен",
+        "placeholder": "Ваше сообщение"
+    },
+    "crash": {
+        "players": "игроков",
+        "skins placed": "скинов",
+        "bets value": "сумма ставок",
+        "All bets": "Все ставки",
+        "Hash": "Хэш",
+        "Your bet": "Ваша ставка",
+        "Select items from your inventory to play": "Выберите предметы из инвентаря",
+        "Save": "Сохранить",
+        "Edit": "Изменить",
+        "You won": "Вы выиграли",
+        "Take bet": "Забрать ставку",
+        "Place bet": "Сделать ставку",
+        "Select items first": "Выберите предметы"
+    },
+    "inventory": {
+        "Your inventory": "Инвентарь",
+        "inventoryHeadSubtitle": "{{weaponsAmount}} предметов, на сумму {{totalPrice}}",
+        "No items found": "Предметы не найдены",
+        "Your inventory is empty": "Твой интвентарь пуст",
+        "Purchase some skins in shop to play and withdraw items": "Купи несколько скинов в магазине, чтобы сыграть",
+        "Selected": "Выбрано",
+        "Withdraw": "Вывести",
+        "Shop new items": "Купить скины"
+    },
+    "login": {
+        "Log in with Steam": "Войти через Steam",
+        "checkList": ["Мне больше 18 лет", "Я согласен с пользовательским соглашением"]
+    },
+    "exchangeItems": {
+        "modalTitle": "Обмен",
+        "search": {
+            "placeholder": "Найти предмет"
+        },
+        "price": "Цена",
+        "stockOnly": "В наличии",
+        "Exchange": "Обменять",
+        "Min": "Мин.",
+        "Max": "Макс.",
+        "Left": "Осталось"
+    },
+    "profile": {
+        "referral": {
+            "title": "Реферальная ссылка",
+            "Invited": "Приглашено",
+            "Your percent": "Твой процент",
+            "Received": "Получено",
+            "Your level": "Твой уровень",
+            "more to get level": "еще {{forNextLevel}}, до уровеня {{level}}"
+        },
+        "history": {
+            "title": "История игр",
+            "Deposits": "Депозиты",
+            "Withdrawals": "Выводы",
+            "Crash bets": "Crash ставки"
+        },
+        "header": {
+            "Deposit": "Депозит",
+            "info": {
+                "Games played": "Игр",
+                "Top ratio": "Лучший коэф",
+                "Winrate": "Выигрышей"
+            }
+        },
+        "anonimSettings": {
+            "For streamers": "Для стримеров"
+        },
+        "tradeUrlSettings": {
+            "title": "Настройки",
+            "Your trade url": "Твоя ссылка на обмен",
+            "Find the link": "Найти ссылку",
+            "Save": "Сохранить"
+        }
+    },
+    "support": {
+        "title": "Поддержка",
+        "subTitle": "Мы в сети, сообщите сотруднику поддержки о своей проблеме и получите быстрый ответ",
+        "Close ticket": "Закрыть тикет",
+        "Attach": "Прикрепить",
+        "Send": "Отправить"
+    },
+    "header": {
+        "History": "История",
+        "Support": "Поддержка",
+        "dropDown": {
+            "Settings": "Настройки",
+            "Sign out": "Выйти"
+        }
+    }
+}
