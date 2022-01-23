@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Trebuchet MS";
+    src: local("Trebuchet MS"), local("TrebuchetMS"),
+        url("../fonts/TrebuchetMS.woff") format("woff"),
+        url("../fonts/TrebuchetMS.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Trebuchet MS";
+    src: local("Trebuchet MS Bold"), local("TrebuchetMS-Bold"),
+        url("../fonts/TrebuchetMS-Bold.woff") format("woff"),
+        url("../fonts/TrebuchetMS-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}

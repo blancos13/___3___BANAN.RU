@@ -1,0 +1,176 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 8px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #333337;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #3a3a3fce;
+}
+
+// @media all and (min-width: 1200px) {
+//     html {
+//         font-size: 39.0625% !important;
+//     } /* 1200/1920 * 62.5 */
+// }
+
+// @media all and (min-width: 1440px) {
+//     html {
+//         font-size: 46.875% !important;
+//     }
+// }
+
+// @media all and (min-width: 1600px) {
+//     html {
+//         font-size: 52.0833333333% !important;
+//     }
+// }
+
+// @media all and (min-width: 1920px) {
+//     html {
+//         font-size: 62.5% !important;
+//     }
+// }
+
+.app {
+    font-family: "Trebuchet MS";
+    background-color: #202126;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    top: 0;
+    bottom: 0px;
+    height: 100vh;
+    overflow-x: hidden;
+
+    display: grid;
+
+    grid-template: 64px 1fr / auto 1fr auto;
+
+    grid-template-areas:
+        "header header header"
+        "chat content inventory";
+
+    &.app-reversed {
+        grid-template-areas:
+            "header header header"
+            "inventory content chat";
+
+        .app__notifications {
+            display: flex;
+            justify-content: flex-start;
+
+            $left: calc(100% + 10px);
+            position: absolute;
+            left: $left;
+            bottom: 10px;
+            .notifications__row {
+                align-items: flex-start;
+            }
+        }
+        .app__inventory {
+            justify-self: start;
+        }
+    }
+
+    &__content {
+        font-size: 10px;
+        position: relative;
+        height: calc(100vh - 64px);
+        grid-area: content;
+        padding: 32px 56px 0px 56px;
+        padding: 2.3rem 4rem 0px 4rem;
+        width: 100%;
+
+        @media (max-width: 1440px) {
+            padding: 2rem 2rem 0px;
+        }
+
+        @media (max-width: 1024px) {
+            padding: calc(1rem + 2px);
+            padding-bottom: 0px;
+        }
+
+        @media (max-width: 768px) {
+            padding: calc(1rem + 2px);
+            padding-bottom: 0px;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+    &__chat {
+        grid-area: chat;
+        //max-width: 376px;
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+    &__inventory {
+        justify-self: end;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        grid-area: inventory;
+    }
+    &__notifications {
+        display: flex;
+        justify-content: flex-end;
+        z-index: 11000;
+        $right: calc(100% + 10px);
+        right: $right;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        overflow: hidden;
+        &__notifications {
+            bottom: unset;
+            top: calc(-100% + 64px + 12px);
+
+            right: 10px;
+        }
+
+        &.app-reversed {
+            .app__notifications {
+                bottom: unset;
+                top: calc(-100% + 64px + 12px);
+                left: 10px;
+            }
+        }
+        &__content {
+            height: calc(100vh - 64px - 122px);
+        }
+
+        &.app-reversed {
+            grid-template: 64px 1fr / 1fr;
+            grid-template-areas:
+                "header"
+                "content";
+        }
+        &__inventory {
+            grid-area: unset;
+            z-index: 1000;
+            position: absolute;
+            height: 100%;
+            top: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        grid-template: 64px 1fr / 1fr;
+        grid-template-areas:
+            "header"
+            "content";
+    }
+}

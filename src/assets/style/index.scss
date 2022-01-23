@@ -1,0 +1,36 @@
+@import "./default.scss";
+
+body {
+    top: 0 !important;
+}
+// .skiptranslate {
+//     display: none;
+//     height: 0;
+// }
+// .language__img {
+//     cursor: pointer;
+// }
+
+@keyframes cssload-opacity {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#root {
+    background-color: #202126; //temp
+    max-height: 100vh;
+    height: 100%;
+    font-size: 13px;
+}

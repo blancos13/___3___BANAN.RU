@@ -1,0 +1,6 @@
+$w-width: 144px;
+$w-height: 160px;
+@media (max-width: 1800px) {
+    $w-width: 110px;
+    $w-height: calc(#{$w-width} * 1.11);
+}
