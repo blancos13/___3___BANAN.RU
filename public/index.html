@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+    <title>rull_3</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script>
+    /////////////////////// Prototypes start
+    Object.prototype.isEmpty = function () {
+        return Object.keys(this).length == 0
+    }
+
+    Object.prototype.stringNice = function () {
+        var parts = Number(this).toFixed(2).split(".")
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+        return parts.join(".")
+    }
+
+    Object.prototype.countId = function () {
+        let json = []
+        for (let i = 0; i < this.length; i++) {
+            let item = json.find((v) => v.itemId == this[i])
+            if (item) item.count++
+            else json.push({ itemId: this[i], count: 1 })
+        }
+        return json
+    }
+    Object.prototype.deleteOne = function (id) {
+        this.splice(this.indexOf(id), 1)
+        return this
+    }
+/////////////////////// Prototypes end
+</script>
+
+</html>
